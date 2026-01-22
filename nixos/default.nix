@@ -16,10 +16,11 @@
 
   environment = {
     shells = with pkgs; [ zsh ];
+    systemPackages = with pkgs; [ gnumake ];
   };
 
   users = {
-    users.kodlak = {
+    users.nixos = {
       isNormalUser = true;
       extraGroups = [ "wheel" ];
       hashedPassword = "$y$j9T$w04YAfRbj6NhbRTNx479d.$mLXI5z2pOeSSsg6nYfyhuGtVK.0HhX0SW6i/d.7btJ/";

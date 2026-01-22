@@ -6,8 +6,8 @@
 }:
 {
   home = {
-    username = "kodlak";
-    homeDirectory = "/home/kodlak";
+    username = "nixos";
+    homeDirectory = "/home/nixos";
     stateVersion = "25.05";
 
     packages =
@@ -19,6 +19,7 @@
         curl
         wget
         bat
+        gh
       ]
       ++ [ inputs.nvim.packages."x86_64-linux".default ];
   };
@@ -78,7 +79,7 @@
         fzedit() {
         	file="$(${pkgs.fzf}/bin/fzf)"
         	if [[ -n "$file" ]]; then
-        		$EDITOR "$file"
+        		nvim "$file"
         	fi
         }
       '';

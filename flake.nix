@@ -39,7 +39,7 @@
               {
                 home-manager.useGlobalPkgs = true;
                 home-manager.useUserPackages = true;
-                home-manager.users.kodlak = import ./home;
+                home-manager.users.nixos = import ./home;
                 home-manager.extraSpecialArgs = { inherit inputs; };
               }
 
