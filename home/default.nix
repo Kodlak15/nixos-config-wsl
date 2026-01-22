@@ -10,7 +10,17 @@
     homeDirectory = "/home/kodlak";
     stateVersion = "25.05";
 
-    packages = (with pkgs; [ gcc ]) ++ [ inputs.nvim.packages."x86_64-linux".default ];
+    packages =
+      with pkgs;
+      [
+        gcc
+        ripgrep
+        tree
+        curl
+        wget
+        bat
+      ]
+      ++ [ inputs.nvim.packages."x86_64-linux".default ];
   };
 
   programs = {
