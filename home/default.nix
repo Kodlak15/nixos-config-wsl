@@ -20,6 +20,7 @@
         wget
         bat
         gh
+        eza
       ]
       ++ [ inputs.nvim.packages."x86_64-linux".default ];
   };
@@ -93,6 +94,8 @@
         nb = "nix build";
         nr = "nix run";
         nd = "nix develop";
+        ls = "eza -l";
+        lsa = "eza -la";
       };
     };
 
